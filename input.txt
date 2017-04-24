@@ -12,6 +12,7 @@ W    Post content2
 T 2009-06-01 20:00:00
 U http://twitter.com/testuser3
 W    Post content3 sleep
+T this post is tricky
 
 T 2009-06-01 09:00:00
 U http://twitter.com/testuser4

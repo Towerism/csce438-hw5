@@ -1,23 +1,28 @@
 import java.io.IOException;
 import java.util.Iterator;
+import java.io.DataInput;
+import java.io.DataOutput;
+import java.lang.StringBuilder;
 import java.lang.Iterable;
 import java.util.List;
 import java.util.Arrays;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 // started with the word count class from 
 // https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html
 public class TwitterDataMinerP1 {
-
     public static class TokenizerMapper
         extends Mapper<Object, Text, Text, IntWritable>{
 
@@ -28,15 +33,17 @@ public class TwitterDataMinerP1 {
                         ) throws IOException, InterruptedException {
             List<String> lines = Arrays.asList(value.toString().split("\n"));
             Iterator<String> lineItr = lines.iterator();
+            String hour;
             while(lineItr.hasNext()) {
                 String line = lineItr.next();
                 if (line.length() < 1)
                     continue;
                 if (line.charAt(0) == 'T') {
                     String[] time = line.split("\\s+");
-                    String hour = time[2].substring(0, 2); // just get the hour
+                    hour = time[2].substring(0, 2); // just get the hour
                     word.set(hour);
                     context.write(word, one);
+                    return;
                 }
             }
         }
@@ -62,7 +69,9 @@ public class TwitterDataMinerP1 {
     // same main from word count example
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
+        conf.set("textinputformat.record.delimiter", "\n\n");
         Job job = Job.getInstance(conf, "word count");
+        job.setInputFormatClass(TextInputFormat.class);
         job.setJarByClass(TwitterDataMinerP1.class);
         job.setMapperClass(TokenizerMapper.class);
         job.setCombinerClass(IntSumReducer.class);

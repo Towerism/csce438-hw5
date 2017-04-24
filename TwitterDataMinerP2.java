@@ -35,15 +35,17 @@ public class TwitterDataMinerP2 {
             Iterator<String> lineItr = lines.iterator();
             boolean foundSleep = false;
             boolean readingContent = false;
+            boolean doneWithTime = false;
             String hour;
             while(lineItr.hasNext() && !foundSleep) {
                 String line = lineItr.next();
                 if (line.length() < 1)
                     continue;
-                if (line.charAt(0) == 'T' && !readingContent) {
+                if (line.charAt(0) == 'T' && !doneWithTime) {
                     String[] time = line.split("\\s+");
                     hour = time[2].substring(0, 2); // just get the hour
                     word.set(hour);
+                    doneWithTime = true; // we don't want to accidentally overwrite hour in the future
                 }
                 if (line.charAt(0) == 'W') {
                     readingContent = true;
