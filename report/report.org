@@ -1,0 +1,23 @@
+#+OPTIONS: toc:nil num:nil
+#+AUTHOR: Austing Fisher and Martin Fracker
+#+LATEX_HEADER: \usepackage[margin=1in]{geometry}
+#+TITLE: HW5 Report
+* Instructions for Comiling and Running
+Run =make=. Then there are two jar files: one for problem 1 and one for problem
+2 (the bonus problem). The jar files are =p1.jar= and =p2.jar=, respectively.
+The make targets =run-p1= and =run-p2= run the programs using the sample
+=input.txt= file and save it in the an =output= directory.
+
+* Dataset Results
+The outputs from both programs are saved in the hdfs directories
+=/user/mf-17s/p1-output= and =/user/mf-17s/p2-output=, respectively. The
+histogram for the number of tweets per hour can be seen in Figure [[fig:p1]]. The histogram
+for the number of sleep tweets per hour can be seen in Figure [[fig:p2]].
+
+#+Name: fig:p1
+#+Caption: The tweets encountered in each hour.
+[[./img/histogram_p1.png]]
+
+#+Name: fig:p2
+#+Caption: The sleep tweets encountered in each hour.
+[[./img/histogram_p2.png]]
