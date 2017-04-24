@@ -1,76 +1,62 @@
 15
-2009-06-01 20:00:00
-U
-http://twitter.com/testuser1
-W    Post content1
+T 2009-06-01 20:00:00
+U http://twitter.com/testuser1
+W    Post content1 T
+the post T asdf hia asdf 
 
-2009-06-01 03:00:00
-U
-http://twitter.com/testuser2
+T 2009-06-01 03:00:00
+U http://twitter.com/testuser2
 W    Post content2
 
-2009-06-01 20:00:00
-U
-http://twitter.com/testuser3
+T 2009-06-01 20:00:00
+U http://twitter.com/testuser3
 W    Post content3
 
-2009-06-01 09:00:00
-U
-http://twitter.com/testuser4
+T 2009-06-01 09:00:00
+U http://twitter.com/testuser4
 W    Post content4
 
-2009-06-01 09:00:00
-U
-http://twitter.com/testuser5
+T 2009-06-01 09:00:00
+U http://twitter.com/testuser5
 W    Post content5
 
-2009-06-01 09:00:00
-U
-http://twitter.com/testuser6
+T 2009-06-01 09:30:00
+U http://twitter.com/testuser6
 W    Post content6
 
-2009-06-01 07:00:00
-U
-http://twitter.com/testuser7
+T 2009-06-01 07:00:00
+U http://twitter.com/testuser7
 W    Post content7
 
-2009-06-01 07:00:00
-U
-http://twitter.com/testuser8
+T 2009-06-01 07:00:00
+U http://twitter.com/testuser8
 W    Post content8
 
-2009-06-01 07:00:00
-U
-http://twitter.com/testuser9
+T 2009-06-01 07:00:00
+U http://twitter.com/testuser9
 W    Post content9
 
-2009-06-01 04:00:00
-U
-http://twitter.com/testuser10
+T 2009-06-01 04:00:00
+U http://twitter.com/testuser10
 W    Post content10
 
-2009-06-01 04:00:00
-U
-http://twitter.com/testuser11
+T 2009-06-01 04:00:00
+U http://twitter.com/testuser11
 W    Post content11
 
-2009-06-01 03:00:00
-U
-http://twitter.com/testuser12
+T 2009-06-01 03:00:00
+U http://twitter.com/testuser12
 W    Post content12
 
-2009-06-01 03:00:00
-U
-http://twitter.com/testuser13
+T 2009-06-01 03:00:00
+U http://twitter.com/testuser13
 W    Post content13
 
-2009-06-01 02:00:00
-U
-http://twitter.com/testuser14
+T 2009-06-01 02:00:00
+U http://twitter.com/testuser14
 W    Post content14
 
-2009-06-01 01:00:00
-U
-http://twitter.com/testuser15
+T 2009-06-01 01:00:00
+U http://twitter.com/testuser15
 W    Post content15
 
