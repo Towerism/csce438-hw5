@@ -82,6 +82,7 @@ public class TwitterDataMinerP2 {
     }
 
     // same main from word count example
+    // except we use TextInputFormat with \n\n record delimiter
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
         conf.set("textinputformat.record.delimiter", "\n\n");
