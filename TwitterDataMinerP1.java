@@ -35,7 +35,8 @@ public class TwitterDataMinerP1 {
                 if (line.charAt(0) == 'T') {
                     String[] time = line.split("\\s+");
                     String hour = time[2].substring(0, 2); // just get the hour
-                    context.write(new Text(hour), one);
+                    word.set(hour);
+                    context.write(word, one);
                 }
             }
         }
